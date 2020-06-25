@@ -11,7 +11,7 @@ namespace Basketball_Application_2
 {
 
 
-    public partial class WebForm1
+    public partial class LogInPage
     {
 
         /// <summary>
@@ -33,6 +33,15 @@ namespace Basketball_Application_2
         protected global::System.Web.UI.WebControls.Label Label1;
 
         /// <summary>
+        /// HyperLink1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+
+        /// <summary>
         /// Label2 control.
         /// </summary>
         /// <remarks>
@@ -42,13 +51,13 @@ namespace Basketball_Application_2
         protected global::System.Web.UI.WebControls.Label Label2;
 
         /// <summary>
-        /// txtName control.
+        /// User1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtName;
+        protected global::System.Web.UI.WebControls.TextBox User1;
 
         /// <summary>
         /// Label3 control.
@@ -60,40 +69,13 @@ namespace Basketball_Application_2
         protected global::System.Web.UI.WebControls.Label Label3;
 
         /// <summary>
-        /// txtEmailAddress control.
+        /// Password1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEmailAddress;
-
-        /// <summary>
-        /// Label4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
-
-        /// <summary>
-        /// txtPassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtPassword;
-
-        /// <summary>
-        /// txtConfirmpassword control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtConfirmpassword;
+        protected global::System.Web.UI.WebControls.TextBox Password1;
 
         /// <summary>
         /// Button1 control.
@@ -105,12 +87,12 @@ namespace Basketball_Application_2
         protected global::System.Web.UI.WebControls.Button Button1;
 
         /// <summary>
-        /// lblmsg control.
+        /// Label4 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblmsg;
+        protected global::System.Web.UI.WebControls.Label Label4;
     }
 }

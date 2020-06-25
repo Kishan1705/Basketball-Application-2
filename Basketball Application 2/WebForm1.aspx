@@ -2,22 +2,45 @@
 
 <!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml
-    <link rel="stylesheet" href="StyleSheet1.css">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
 <head runat="server">
     <title></title>
-    <style>
-    #form1 {
-    height: 768px;
-    width: 1366px;
-    background-color: blue;
-    margin-left: auto;
-    margin-right: auto;
-    </style>
+
+
+
 </head>
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Label ID="Label1" runat="server" Text="Sign Up"></asp:Label>
+         
+            <br />
+            <br />
+            
+            <asp:Label ID="Label2" runat="server" Text="Username:"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Label ID="Label3" runat="server" Text="Email Address:"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtEmailAddress" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Label ID="Label4" runat="server" Text="Password:"></asp:Label>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtPassword" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            Confirm Password:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="txtConfirmpassword" runat="server"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Sign Up" />
+            <br />
+            <asp:Label ID="lblmsg" runat="server" Text=""></asp:Label>
+            <br />
         </div>
     </form>
 </body>
