@@ -15,6 +15,7 @@ namespace Basketball_Application_2
         string connectionString = @"Data Source = tpisql01.avcol.school.nz; Initial Catalog = breakersdatabasekp; Integrated Security = True;";
         protected void Button1_Click(object sender, EventArgs e)
         {
+   
             if (txtName.Text == "" || txtPassword.Text == "")
             {
                 lblmsg.Text = "Please enter text";
@@ -50,6 +51,8 @@ namespace Basketball_Application_2
         {
             txtName.Text = txtEmailAddress.Text = txtPassword.Text = txtConfirmpassword.Text = "";
         }
+       
+        
     }
 }
 
