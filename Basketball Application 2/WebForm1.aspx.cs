@@ -13,7 +13,7 @@ namespace Basketball_Application_2
     {
 
         string connectionString = @"Data Source = tpisql01.avcol.school.nz; Initial Catalog = breakersdatabasekp; Integrated Security = True;";
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e) //sign up
         {
    
             if (txtName.Text == "" || txtPassword.Text == "")

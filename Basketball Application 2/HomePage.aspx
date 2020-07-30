@@ -5,13 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 
-    <style>
+ <style>
 ul {
   list-style-type: none;
-  margin: 0;
+  margin: -10px;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: #111;
+  align-content:center;
+
 }
 
 li {
@@ -24,25 +26,42 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  
 }
 
 li a:hover:not(.active) {
-  background-color: #111;
+  background-color: #1c6280;
 }
 
 .active {
-  background-color: #4CAF50;
+  background-color: #33AEE3;
+
+
 }
+
+
+
+.Logo{
+
+    padding-top:10px;
+    padding-bottom:20px;
+}
+
+
+
 </style>
         <title></title>
 </head>
-<body>
+    <body>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
+    <div class  ="Logo">
+  <li><a href="#home"> <img src="Images/Sky-Sport-Breakers-Logo-White.png" style="width:61.24px;height:22.7px; "/></a></li>
+  <li><a href="#news">News</a></li>      
   <li><a href="#contact">Contact</a></li>
   <li style="float:right"><a class="active" href="#about">About</a></li>
+
+    </div>
 </ul>
 
 </body>

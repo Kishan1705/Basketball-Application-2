@@ -129,13 +129,16 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="HomePage.aspx" />
+    <Content Include="Images\Sky-Sport-Breakers-Logo-White.png" />
     <Content Include="Images\BREAKERS_01_TomAbercrombie_1267.png" />
     <Content Include="Images\BREAKERS_02_CoreyWebster_2813.png" />
     <Content Include="Images\BREAKERS_03_FinnDelany_3065.png" />
     <Content Include="Images\SparkArena.jpg" />
     <Content Include="LogInPage.aspx" />
     <Content Include="Content\StyleSheet1.css" />
+    <Content Include="Modify.aspx" />
     <Content Include="Players.aspx" />
+    <Content Include="videos.aspx" />
     <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -211,6 +214,13 @@
     <Compile Include="LogInPage.aspx.designer.cs">
       <DependentUpon>LogInPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Modify.aspx.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Modify.aspx.designer.cs">
+      <DependentUpon>Modify.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Players.aspx.cs">
       <DependentUpon>Players.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -219,6 +229,13 @@
       <DependentUpon>Players.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="videos.aspx.cs">
+      <DependentUpon>videos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="videos.aspx.designer.cs">
+      <DependentUpon>videos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -234,7 +251,9 @@
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="IMages2\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />

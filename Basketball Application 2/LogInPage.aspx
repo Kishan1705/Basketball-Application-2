@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+   
 
      <style>
 ul {
@@ -12,6 +13,7 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #111;
+  align-content:center;
 
 }
 
@@ -25,6 +27,7 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  
 }
 
 li a:hover:not(.active) {
@@ -33,18 +36,35 @@ li a:hover:not(.active) {
 
 .active {
   background-color: #33AEE3;
+
+
 }
+
+
+
+.Logo{
+
+    padding-top:10px;
+    padding-bottom:20px;
+}
+
+
+
 </style>
         <title></title>
 </head>
     <body>
 
 <ul>
-  <li><a href="#home">Home</a></li>
-  <li><a href="#news">News</a></li>
+    <div class  ="Logo">
+  <li><a href="#home"> <img src="Images/Sky-Sport-Breakers-Logo-White.png" style="width:61.24px;height:22.7px; "/></a></li>
+  <li><a href="#news">News</a></li>      
   <li><a href="#contact">Contact</a></li>
   <li style="float:right"><a class="active" href="#about">About</a></li>
+
+    </div>
 </ul>
+        
 
   
 
@@ -55,7 +75,7 @@ li a:hover:not(.active) {
             <asp:Label ID="Label1" runat="server" Text="Sign In "></asp:Label>
             <br />
             <br />
-            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/WebForm1.aspx">Don&#39;t have an account, Sign up now</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/WebForm1.aspx">Dont have an account, Sign up now</asp:HyperLink>
             <br />
             <br />
             <asp:Label ID="Label2" runat="server" Text="Username:"></asp:Label>
@@ -73,6 +93,8 @@ li a:hover:not(.active) {
             <br />
             <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
         </div>
+
+
     </form>
 </body>
 </html>
