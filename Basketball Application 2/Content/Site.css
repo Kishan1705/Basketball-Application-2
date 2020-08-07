@@ -31,3 +31,39 @@ textarea {
 }
 
 
+.ul {
+    list-style-type: none;
+    margin: -10px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #111;
+    align-content: center;
+}
+
+.list {
+    float: left;
+}
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover:not(.active) {
+            background-color: #1c6280;
+        }
+
+.active {
+    background-color: #33AEE3;
+}
+
+
+
+.Logo {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+

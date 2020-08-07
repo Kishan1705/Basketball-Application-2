@@ -40,7 +40,7 @@ namespace Basketball_Application_2
                     sqlCmd.Parameters.AddWithValue("@Email", txtEmailAddress.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
-                    lblmsg.Text = "YOure in";
+                    lblmsg.Text = "Youre in";
                     Clear();
 
 

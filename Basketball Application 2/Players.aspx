@@ -77,7 +77,7 @@ li a:hover:not(.active) {
   </div>
 </div>
 
-<div class="w3-quarter2" style="position:relative; top: 160px; right: 100px;">
+<div class="w3-quarter" style="position:relative; top: 160px; right: 100px;">
 <div class="w3-card w3-white">
   <div class="w3-container">
   <iframe width="425" height="270" src="Images/BREAKERS_01_TomAbercrombie_1267.png" style="width:425px;height:270px;"  frameborder="0" allowfullscreen="true"></iframe>

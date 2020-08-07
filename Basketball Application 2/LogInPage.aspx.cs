@@ -24,9 +24,9 @@ namespace Basketball_Application_2
             SqlDataAdapter sqa = new SqlDataAdapter("Select UserID From breakersdatabase where Username = '" + User1.Text + "' and Password = '" + Password1.Text + "'", con);
             System.Data.DataTable dtbl = new System.Data.DataTable();
             sqa.Fill(dtbl);
-            if (User1.Text == "Admin" && Password1.Text == "Dfghj22x2")
+            if (User1.Text == "Admin" && Password1.Text == "yozatay")
             {
-                Response.Redirect("~/ADMINPAGE");
+                Response.Redirect("~/Modify.aspx");
             }
             else if (dtbl.Rows.Count > 0)
             {
@@ -34,7 +34,9 @@ namespace Basketball_Application_2
             }
             else
             {
+                Label4.Text = "Incorrect Username/Password";
                 Response.Redirect("~/LogInPage.aspx");
+                
 
 
             }

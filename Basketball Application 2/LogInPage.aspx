@@ -91,7 +91,7 @@ li a:hover:not(.active) {
             <asp:Button ID="Button1" runat="server" Text="Sign In" OnClick="Button1_Click" />
             <br />
             <br />
-            <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
+            <asp:Label ID="Label4" runat="server" Text=""></asp:Label>
         </div>
 
 

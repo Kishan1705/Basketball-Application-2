@@ -17,6 +17,7 @@ namespace Basketball_Application_2
             if (!IsPostBack)
             {
                 btndelete.Enabled = false;
+                FillGridView();
             }
         }
 
@@ -32,8 +33,6 @@ namespace Basketball_Application_2
             lblsuccessmessage.Text = lblerrormessage.Text = "";
             btnsave.Text = "Save";
             btndelete.Enabled = false;
-
-
         }
 
         protected void btnsave_Click(object sender, EventArgs e)
@@ -48,16 +47,66 @@ namespace Basketball_Application_2
             sqlCmd.Parameters.AddWithValue("@Password", txtpassword.Text.Trim());
             sqlCmd.ExecuteNonQuery();
             sqlcon.Close();
+            string UserID = hfUserID.Value;
             Clear();
             if (hfUserID.Value == "")
                 lblsuccessmessage.Text = "Saved Successfully";
             else
-                lblerrormessage.Text = "Updated Successfully";
-
+                lblsuccessmessage.Text = "Updated Successfully";
+            FillGridView();
 
         }
 
-        
+      void FillGridView()
+        {
 
+
+
+            if (sqlcon.State == ConnectionState.Closed)
+                sqlcon.Open();
+            SqlDataAdapter sqlDa = new SqlDataAdapter("UserViewAll", sqlcon);
+            sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
+            DataTable dtbl = new DataTable();
+            sqlDa.Fill(dtbl);
+            sqlcon.Close();
+            gvUser.DataSource = dtbl;
+            gvUser.DataBind();
+        }
+
+        protected void lnk_OnClick(object sender, EventArgs e)
+        {
+            int UserID = Convert.ToInt32((sender as LinkButton).CommandArgument);
+            if (sqlcon.State == ConnectionState.Closed)
+                sqlcon.Open();
+            SqlDataAdapter sqlDa = new SqlDataAdapter("UserViewByID", sqlcon);
+            sqlDa.SelectCommand.CommandType = CommandType.StoredProcedure;
+            sqlDa.SelectCommand.Parameters.AddWithValue("@UserID", UserID);
+            DataTable dtbl = new DataTable();
+            sqlDa.Fill(dtbl);
+            sqlcon.Close();
+            hfUserID.Value = UserID.ToString();
+            txtusername.Text = dtbl.Rows[0]["Username"].ToString();
+            txtemail.Text = dtbl.Rows[0]["Email"].ToString();
+            txtpassword.Text = dtbl.Rows[0]["Password"].ToString();
+            btnsave.Text = "Update";
+            btndelete.Enabled = true;
+        }
+
+        protected void btndelete_Click(object sender, EventArgs e)
+        {
+            if (sqlcon.State == ConnectionState.Closed)
+                sqlcon.Open();
+            SqlCommand sqlCmd = new SqlCommand("UserDeleteByID", sqlcon);
+            sqlCmd.CommandType = CommandType.StoredProcedure;
+            sqlCmd.Parameters.AddWithValue("@UserID", Convert.ToInt32(hfUserID.Value));
+            sqlCmd.ExecuteNonQuery();
+            sqlcon.Close();
+            Clear();
+            FillGridView();
+            lblsuccessmessage.Text = "Deleted Succesfully";
+
+
+
+        }
     }
 }

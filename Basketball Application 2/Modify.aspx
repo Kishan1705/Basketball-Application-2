@@ -41,7 +41,7 @@
                     </td>
                     <td colspan="2">
                         <asp:Button ID="btnsave" runat="server" Text="Save" OnClick="btnsave_Click" />
-                        <asp:Button ID="btndelete" runat="server" Text="Delete" />
+                        <asp:Button ID="btndelete" runat="server" Text="Delete" OnClick="btndelete_Click" />
                         <asp:Button ID="btnclear" runat="server" Text="Clear" OnClick="btnclear_Click1" />
                          
                     </td>
@@ -71,7 +71,7 @@
                     <asp:BoundField DataField="Password" HeaderText="Password" />
                     <asp:TemplateField>
                         <ItemTemplate>
-                            <asp:LinkButton ID="lnkView" runat="server" CommandArgument='<%# Eval("UserID") %>' >View</asp:LinkButton>
+                            <asp:LinkButton ID="lnkView" runat="server" CommandArgument='<%# Eval("UserID") %>' OnClick="lnk_OnClick" >View</asp:LinkButton>
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
