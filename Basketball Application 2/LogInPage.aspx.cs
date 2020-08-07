@@ -34,9 +34,8 @@ namespace Basketball_Application_2
             }
             else
             {
-                Label4.Text = "Incorrect Username/Password";
+
                 Response.Redirect("~/LogInPage.aspx");
-                
 
 
             }

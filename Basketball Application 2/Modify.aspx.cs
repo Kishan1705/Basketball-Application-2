@@ -37,24 +37,30 @@ namespace Basketball_Application_2
 
         protected void btnsave_Click(object sender, EventArgs e)
         {
-            if (sqlcon.State == ConnectionState.Closed)
-                sqlcon.Open();
-            SqlCommand sqlCmd = new SqlCommand("UserCreateOrUpdate",sqlcon);
-            sqlCmd.CommandType = CommandType.StoredProcedure;
-            sqlCmd.Parameters.AddWithValue("@UserID",(hfUserID.Value==""?0:Convert.ToInt32(hfUserID.Value)));
-            sqlCmd.Parameters.AddWithValue("@Username", txtusername.Text.Trim());
-            sqlCmd.Parameters.AddWithValue("@Email", txtemail.Text.Trim());
-            sqlCmd.Parameters.AddWithValue("@Password", txtpassword.Text.Trim());
-            sqlCmd.ExecuteNonQuery();
-            sqlcon.Close();
-            string UserID = hfUserID.Value;
-            Clear();
-            if (hfUserID.Value == "")
-                lblsuccessmessage.Text = "Saved Successfully";
+            if (txtusername.Text == "" || txtemail.Text == "" || txtpassword.Text == "" || txtusername.Text.Length < 5 || txtemail.Text.Length < 5 || txtpassword.Text.Length < 5)
+            {
+                lblerrormessage.Text = "Not Enough Credentials";
+            }
             else
-                lblsuccessmessage.Text = "Updated Successfully";
-            FillGridView();
-
+            {
+                if (sqlcon.State == ConnectionState.Closed)
+                    sqlcon.Open();
+                SqlCommand sqlCmd = new SqlCommand("UserCreateOrUpdate", sqlcon);
+                sqlCmd.CommandType = CommandType.StoredProcedure;
+                sqlCmd.Parameters.AddWithValue("@UserID", (hfUserID.Value == "" ? 0 : Convert.ToInt32(hfUserID.Value)));
+                sqlCmd.Parameters.AddWithValue("@Username", txtusername.Text.Trim());
+                sqlCmd.Parameters.AddWithValue("@Email", txtemail.Text.Trim());
+                sqlCmd.Parameters.AddWithValue("@Password", txtpassword.Text.Trim());
+                sqlCmd.ExecuteNonQuery();
+                sqlcon.Close();
+                string UserID = hfUserID.Value;
+                Clear();
+                if (hfUserID.Value == "")
+                    lblsuccessmessage.Text = "Saved Successfully";
+                else
+                    lblsuccessmessage.Text = "Updated Successfully";
+                FillGridView();
+            }
         }
 
       void FillGridView()
