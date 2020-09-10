@@ -28,9 +28,8 @@ namespace Basketball_Application_2
 
         public void Clear()
         {
-            hfUserID.Value = "";
-            txtusername.Text = txtemail.Text = txtpassword.Text = "";
-            lblsuccessmessage.Text = lblerrormessage.Text = "";
+            
+
             btnsave.Text = "Save";
             btndelete.Enabled = false;
         }
@@ -110,6 +109,8 @@ namespace Basketball_Application_2
             Clear();
             FillGridView();
             lblsuccessmessage.Text = "Deleted Succesfully";
+            this.Hide();
+
 
 
 

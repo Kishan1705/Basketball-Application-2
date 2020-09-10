@@ -57,10 +57,10 @@ li a:hover:not(.active) {
 
 <ul>
     <div class  ="Logo">
-  <li><a href="#home"> <img src="Images/Sky-Sport-Breakers-Logo-White.png" style="width:61.24px;height:22.7px; "/></a></li>
-  <li><a href="#news">News</a></li>      
-  <li><a href="#contact">Contact</a></li>
-  <li style="float:right"><a class="active" href="#about">About</a></li>
+  <li><a href="WebForm1.aspx"> <img src="Images/Sky-Sport-Breakers-Logo-White.png" style="width:61.24px;height:22.7px; "/></a></li>
+  <li><a href="Players.aspx">Players</a></li>      
+  <li><a href="WebForm1.aspx">Register</a></li>
+  <li style="float:right"><a class="active" href="LogInPage.aspx">Sign In</a></li>
 
     </div>
 </ul>
@@ -92,6 +92,9 @@ li a:hover:not(.active) {
             <br />
             <br />
             <asp:Label ID="Label4" runat="server" Text=""></asp:Label>
+            <br />
+            <br />
+            <asp:HyperLink ID="HyperLink2" runat="server">Forgot Password</asp:HyperLink>
         </div>
 
 
