@@ -56,10 +56,11 @@ li a:hover:not(.active) {
     <body>
 
 <ul>
-    <div class  ="Logo">
+  <div class  ="Logo">
   <li><a href="WebForm1.aspx"> <img src="Images/Sky-Sport-Breakers-Logo-White.png" style="width:61.24px;height:22.7px; "/></a></li>
   <li><a href="Players.aspx">Players</a></li>      
   <li><a href="WebForm1.aspx">Register</a></li>
+  <li><a href="UserModify.aspx">Edit</a></li>
   <li style="float:right"><a class="active" href="LogInPage.aspx">Sign In</a></li>
 
     </div>
@@ -80,21 +81,28 @@ li a:hover:not(.active) {
             <br />
             <asp:Label ID="Label2" runat="server" Text="Username:"></asp:Label>
 &nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="User1" runat="server"></asp:TextBox>
+            <asp:TextBox ID="User1" runat="server" onkeydown = "return (event.keyCode!=13)"></asp:TextBox>
             <br />
             <br />
-            <asp:Label ID="Label3" runat="server" Text="Password:"></asp:Label>
+            <asp:Label ID="Label5" runat="server" Text="Email:"></asp:Label>
 &nbsp;&nbsp;
-            <asp:TextBox ID="Password1" runat="server"></asp:TextBox>
+            <asp:TextBox ID="Email1" runat="server" onkeydown = "return (event.keyCode!=13)"></asp:TextBox>
+            <br />
+            <br />
+            <asp:Label ID="Label3" runat="server" onkeydown = "return (event.keyCode!=13)" Text="Password:"></asp:Label>
+&nbsp;&nbsp;
+
+            <asp:TextBox ID="Password1" runat="server" onkeydown = "return (event.keyCode!=13)"></asp:TextBox>
             <br />
             <br />
             <asp:Button ID="Button1" runat="server" Text="Sign In" OnClick="Button1_Click" />
+&nbsp;&nbsp;
             <br />
             <br />
             <asp:Label ID="Label4" runat="server" Text=""></asp:Label>
             <br />
             <br />
-            <asp:HyperLink ID="HyperLink2" runat="server">Forgot Password</asp:HyperLink>
+            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/UserModify.aspx">Forgot Password</asp:HyperLink>
         </div>
 
 

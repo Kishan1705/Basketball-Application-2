@@ -40,8 +40,8 @@ namespace Basketball_Application_2
                     sqlCmd.Parameters.AddWithValue("@Email", txtEmailAddress.Text.Trim());
                     sqlCmd.Parameters.AddWithValue("@Password", txtPassword.Text.Trim());
                     sqlCmd.ExecuteNonQuery();
-                    lblmsg.Text = "You're in";
                     Clear();
+                    Response.Redirect("~/LogInPage.aspx");
 
 
                 }

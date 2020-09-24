@@ -21,7 +21,7 @@ namespace Basketball_Application_2
         {
             SqlConnection con = new SqlConnection(@"Data Source = tpisql01.avcol.school.nz; Initial Catalog = breakersdatabasekp; Integrated Security = True;");
 
-            SqlDataAdapter sqa = new SqlDataAdapter("Select UserID From breakersdatabase where Username = '" + User1.Text + "' and Password = '" + Password1.Text + "'", con);
+            SqlDataAdapter sqa = new SqlDataAdapter("Select UserID From breakersdatabase where Username = '" + User1.Text + "' and Email = '" + Email1.Text + "' and Password = '" + Password1.Text + "'", con);
             System.Data.DataTable dtbl = new System.Data.DataTable();
             sqa.Fill(dtbl);
             if (User1.Text == "Admin" && Password1.Text == "yozatay")
@@ -30,7 +30,12 @@ namespace Basketball_Application_2
             }
             else if (dtbl.Rows.Count > 0)
             {
+                Session["checksignin"] = "True";
+                Session["getusername"] = User1.Text;
+                Session["GetEmail"] = Email1.Text;
+                Session["GetPassword"] = Password1.Text;
                 Response.Redirect("~/HomePage.aspx");
+                
             }
             else
             {
@@ -40,5 +45,7 @@ namespace Basketball_Application_2
 
             }
         }
+
+    
     }
 }

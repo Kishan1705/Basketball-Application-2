@@ -109,7 +109,7 @@ namespace Basketball_Application_2
             Clear();
             FillGridView();
             lblsuccessmessage.Text = "Deleted Succesfully";
-            this.Hide();
+        
 
 
 

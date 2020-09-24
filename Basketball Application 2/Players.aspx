@@ -57,6 +57,7 @@ li a:hover:not(.active) {
   <li><a href="WebForm1.aspx"> <img src="Images/Sky-Sport-Breakers-Logo-White.png" style="width:61.24px;height:22.7px; "/></a></li>
   <li><a href="Players.aspx">Players</a></li>      
   <li><a href="WebForm1.aspx">Register</a></li>
+  <li><a href="UserModify.aspx">Edit</a></li>
   <li style="float:right"><a class="active" href="LogInPage.aspx">Sign In</a></li>
 
     </div>
@@ -68,12 +69,14 @@ li a:hover:not(.active) {
     <h1>OUR UNBREAKABLE TEAM</h1>
         
 
-<div class="w3-quarter" style="position:relative; top: 160px; left: 100px;">
-<div class="w3-card w3-white">
   <div class="w3-container">
   <iframe src="Images/BREAKERS_01_TomAbercrombie_1267.png" style="width:425px;height:270px;"  frameborder="0" allowfullscreen="true"></iframe>  
       <h3>Beginners Guide to Shooting</h3>
   </div>
+        
+
+<div class="w3-quarter" style="position:relative; top: 160px; left: 100px;">
+<div style="margin-bottom:10px"; class="w3-card w3-white">
   </div>
 </div>
 
