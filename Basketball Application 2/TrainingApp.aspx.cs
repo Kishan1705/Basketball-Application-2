@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Data.SqlClient;
+using System.Data;
 
 namespace Basketball_Application_2
 {
@@ -11,12 +13,26 @@ namespace Basketball_Application_2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if ((string)Session["checksignin"] == "True")
+            {
+              
+                Edit5.Visible = true;
+                Training3.Visible = true;
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            Response.Redirect("~/BeginnerPage.aspx");
         }
+     
+
+        protected void btnsignout_Click(object sender, EventArgs e)
+        {
+            Session["checksignin"] = "false";
+            Response.Redirect("~/LogInPage.aspx");
+        }
+
+
     }
 }

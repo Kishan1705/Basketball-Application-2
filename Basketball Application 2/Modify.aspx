@@ -1,7 +1,9 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Modify.aspx.cs" Inherits="Basketball_Application_2.Modify" %>
 
 <!DOCTYPE html>
-
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <style>
@@ -51,24 +53,26 @@ li a:hover:not(.active) {
 </style>
         <title></title>
 </head>
-    <body>
-
+  <body>
+<div class  ="Logo">
 <ul>
-    <div class  ="Logo">
+    
   
   <li><a href="WebForm1.aspx"> <img src="Images/Sky-Sport-Breakers-Logo-White.png" style="width:61.24px;height:22.7px; "/></a></li>
   <li><a href="Players.aspx">Players</a></li>      
   <li><a href="WebForm1.aspx">Register</a></li>
   <li><a href="UserModify.aspx">Edit</a></li>
-  <li style="float:right"><a class="active" href="LogInPage.aspx">Sign In</a></li>
+  
+  <li style="float:right"><asp:Button ID="btnsignout" runat="server" Text="Sign Out" Visible="False" OnClick="btnsignout_Click" /> </li>
+  <li style="float:right"><asp:Label ID="lblwelcome" runat="server" Text="Welcome " Visible="False" ForeColor="#33AEE3"></asp:Label></li>      
 
-    </div>
+    
 </ul>
+</div>
 
-</body>
-</head>
 
-<body>
+
+
     <form id="form1" runat="server">
         <br />
         <div>

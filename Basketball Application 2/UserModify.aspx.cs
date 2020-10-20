@@ -18,6 +18,12 @@ namespace Basketball_Application_2
         {
             Emaillbl.Text = (string)Session["GetEmail"];
             Passlbl.Text = (string)Session["GetPassword"];
+            if ((string)Session["checksignin"] == "True")
+            {
+               
+                Edit3.Visible = true;
+                Training4.Visible = true;
+            }
             if (!IsPostBack)
             {
                 using (SqlConnection sqlcon = new SqlConnection(connectionstring))
@@ -45,6 +51,14 @@ namespace Basketball_Application_2
             lblpassbox.Text = txtpassword.Text;
             lblemailbox.Text = txtemail.Text;
         }
+
+        protected void btnsignout_Click(object sender, EventArgs e)
+        {
+            Session["checksignin"] = "false";
+            Response.Redirect("~/LogInPage.aspx");
+        }
+
+
         protected void txtusername_TextChanged(object sender, EventArgs e)
         {
             lbluserbox.Text = txtusername.Text;

@@ -11,7 +11,27 @@ namespace Basketball_Application_2
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if ((string)Session["checksignin"] == "True")
+            {
+                btnsignin.Visible = false;
+                btnsignout.Visible = true;
+                lblwelcome.Visible = true;
+                lblwelcome.Text = "Welcome " + (string)Session["getusername"];
+                Edit4.Visible = true;
+                Training2.Visible = true;
 
+            }
+        }
+
+        protected void btnsignin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/LogInPage.aspx");
+        }
+
+        protected void btnsignout_Click(object sender, EventArgs e)
+        {
+            Session["checksignin"] = "false";
+            Response.Redirect("~/LogInPage.aspx");
         }
     }
 }

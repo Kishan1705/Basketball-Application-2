@@ -110,6 +110,7 @@
     <Content Include="App_Data\Main Database_log.ldf">
       <DependentUpon>Main Database.mdf</DependentUpon>
     </Content>
+    <Content Include="BeginnerPage.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -129,11 +130,19 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="HomePage.aspx" />
+    <Content Include="Images\CoreyWebster.png" />
+    <Content Include="Images\eDITED.png" />
+    <Content Include="Images\FinnDelany.png" />
+    <Content Include="Images\JordanNgatai.png" />
+    <Content Include="Images\Majok.png" />
+    <Content Include="Images\Majok2.png" />
+    <Content Include="Images\RobLoe.png" />
     <Content Include="Images\Sky-Sport-Breakers-Logo-White.png" />
     <Content Include="Images\BREAKERS_01_TomAbercrombie_1267.png" />
     <Content Include="Images\BREAKERS_02_CoreyWebster_2813.png" />
     <Content Include="Images\BREAKERS_03_FinnDelany_3065.png" />
     <Content Include="Images\SparkArena.jpg" />
+    <Content Include="Images\TomVodanovich.png" />
     <Content Include="LogInPage.aspx" />
     <Content Include="Content\StyleSheet1.css" />
     <Content Include="Modify.aspx" />
@@ -185,6 +194,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="BeginnerPage.aspx.cs">
+      <DependentUpon>BeginnerPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BeginnerPage.aspx.designer.cs">
+      <DependentUpon>BeginnerPage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

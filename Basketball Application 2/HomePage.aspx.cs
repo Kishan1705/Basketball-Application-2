@@ -13,14 +13,21 @@ namespace Basketball_Application_2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if((string)Session["checksignin"] == "True")
+            if ((string)Session["checksignin"] == "True")
             {
                 btnsignin.Visible = false;
                 btnsignout.Visible = true;
                 lblwelcome.Visible = true;
-                lblwelcome.Text = "Welcome " + (string)Session["getusername"]; 
+                lblwelcome.Text = "Welcome " + (string)Session["getusername"];
+                Edit2.Visible = true;
+                Training1.Visible = true;
+            }
+            if ((string)Session["Admin"] == "Whatever")
+            {
+                Admin1.Visible = true;
             }
         }
+
 
         protected void btnsignin_Click(object sender, EventArgs e)
         {

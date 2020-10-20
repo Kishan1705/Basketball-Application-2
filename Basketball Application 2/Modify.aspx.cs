@@ -14,6 +14,8 @@ namespace Basketball_Application_2
         SqlConnection sqlcon = new SqlConnection(@"Data Source = tpisql01.avcol.school.nz; Initial Catalog = breakersdatabasekp; Integrated Security = True;");
         protected void Page_Load(object sender, EventArgs e)
         {
+            Session["Admin"] = "Whatever";
+
             if (!IsPostBack)
             {
                 btndelete.Enabled = false;
@@ -62,7 +64,13 @@ namespace Basketball_Application_2
             }
         }
 
-      void FillGridView()
+        protected void btnsignout_Click(object sender, EventArgs e)
+        {
+            Session["checksignin"] = "false";
+            Response.Redirect("~/LogInPage.aspx");
+        }
+
+        void FillGridView()
         {
 
 

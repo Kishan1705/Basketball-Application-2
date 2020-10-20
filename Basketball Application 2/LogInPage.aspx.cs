@@ -14,7 +14,23 @@ namespace Basketball_Application_2
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if ((string)Session["checksignin"] == "True")
+            {
+
+                Edit2.Visible = true;
+                Training1.Visible = true;
+            }
+        }
+
+        protected void btnsignin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/LogInPage.aspx");
+        }
+
+        protected void btnsignout_Click(object sender, EventArgs e)
+        {
+            Session["checksignin"] = "false";
+            Response.Redirect("~/LogInPage.aspx");
         }
 
         protected void Button1_Click(object sender, EventArgs e)//login
@@ -24,7 +40,7 @@ namespace Basketball_Application_2
             SqlDataAdapter sqa = new SqlDataAdapter("Select UserID From breakersdatabase where Username = '" + User1.Text + "' and Email = '" + Email1.Text + "' and Password = '" + Password1.Text + "'", con);
             System.Data.DataTable dtbl = new System.Data.DataTable();
             sqa.Fill(dtbl);
-            if (User1.Text == "Admin" && Password1.Text == "yozatay")
+            if (User1.Text == "Admin" && Password1.Text == "yozatay" && Email1.Text == "admin@gmail.com")
             {
                 Response.Redirect("~/Modify.aspx");
             }
