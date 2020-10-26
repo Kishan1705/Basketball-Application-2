@@ -16,7 +16,11 @@ namespace Basketball_Application_2
         {
             if ((string)Session["checksignin"] == "True")
             {
-              
+
+                btnsignin.Visible = false;
+                btnsignout.Visible = true;
+                lblwelcome.Visible = true;
+                lblwelcome.Text = "Welcome " + (string)Session["getusername"];
                 Edit1.Visible = true;
                 Training5.Visible = true;
 

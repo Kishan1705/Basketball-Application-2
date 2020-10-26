@@ -17,7 +17,11 @@ namespace Basketball_Application_2
             {
               
                 Edit5.Visible = true;
+                btnsignout.Visible = true;
+                lblwelcome.Visible = true;
+                lblwelcome.Text = "Welcome " + (string)Session["getusername"];
                 Training3.Visible = true;
+                Rego.Visible = false;
             }
         }
 

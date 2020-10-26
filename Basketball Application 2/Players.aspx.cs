@@ -19,7 +19,7 @@ namespace Basketball_Application_2
                 lblwelcome.Text = "Welcome " + (string)Session["getusername"];
                 Edit4.Visible = true;
                 Training2.Visible = true;
-
+                Rego.Visible = false;
             }
         }
 

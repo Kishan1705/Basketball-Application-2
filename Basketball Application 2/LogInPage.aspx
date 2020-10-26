@@ -56,12 +56,12 @@
                 <li><a href="HomePage.aspx">
                     <img src="Images/Sky-Sport-Breakers-Logo-White.png" style="width: 61.24px; height: 22.7px;" /></a></li>
                 <li><a href="Players.aspx">Players</a></li>
-                <li><a href="WebForm1.aspx">Register</a></li>
+                 <asp:Label ID="Rego" runat="server" Text="" Visible="true"><li><a href="WebForm1.aspx">Register</a></li></asp:Label>
                 <asp:Label ID="Edit2" runat="server" Text="" Visible="False"><li><a href="UserModify.aspx">Edit</a></li></asp:Label>
                 <asp:Label ID="Training1" runat="server" Text="" Visible="False"><li><a href="TrainingApp.aspx">Training App</a></li></asp:Label>
                 <asp:Label ID="Admin1" runat="server" Text="" Visible="False"><li><a href="Modify.aspx">Admin Modify</a></li></asp:Label>
-                <li style="float:right"><asp:Button ID="btnsignin" CssClass="active" runat="server" Text="Sign In" OnClick="btnsignin_Click" /> </li>    
-                <li style="float:right"><asp:Button ID="btnsignout" runat="server" Text="Sign Out" Visible="False" OnClick="btnsignout_Click" /> </li>
+                <li style="float:right"><asp:Button ID="btnsignin" CssClass="active" runat="server" Text="Sign In" OnClick="btnsignin_Click" Height="54px"/> </li>    
+                <li style="float:right"><asp:Button ID="btnsignout" runat="server" Text="Sign Out" Visible="False" OnClick="btnsignout_Click" Height="54px"/> </li>
                 <li style="float:right"><asp:Label ID="lblwelcome" runat="server" Text="Welcome " Visible="False" ForeColor="#33AEE3"></asp:Label></li>    
             </ul>
         </div>
@@ -104,7 +104,6 @@
             <asp:Label ID="Label4" runat="server" Text=""></asp:Label>
             <br />
             <br />
-            <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/UserModify.aspx">Forgot Password</asp:HyperLink>
         </div>
 
 

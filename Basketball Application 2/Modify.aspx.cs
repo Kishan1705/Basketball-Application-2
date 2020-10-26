@@ -21,6 +21,12 @@ namespace Basketball_Application_2
                 btndelete.Enabled = false;
                 FillGridView();
             }
+
+            if ((string)Session["checksignin"] == "True")
+            {
+              
+                Rego.Visible = false;
+            }
         }
 
         protected void btnclear_Click1(object sender, EventArgs e)

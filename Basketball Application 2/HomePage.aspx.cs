@@ -21,6 +21,7 @@ namespace Basketball_Application_2
                 lblwelcome.Text = "Welcome " + (string)Session["getusername"];
                 Edit2.Visible = true;
                 Training1.Visible = true;
+                Rego.Visible = false;
             }
             if ((string)Session["Admin"] == "Whatever")
             {

@@ -23,6 +23,7 @@ namespace Basketball_Application_2
                
                 Edit3.Visible = true;
                 Training4.Visible = true;
+                Rego.Visible = false;
             }
             if (!IsPostBack)
             {

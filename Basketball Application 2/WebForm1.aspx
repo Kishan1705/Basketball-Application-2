@@ -48,7 +48,7 @@
     <title></title>
 </head>
 <body>
-
+    <form id="form1" runat="server">
     <div class="Logo">
         <ul>
             <li><a href="HomePage.aspx">
@@ -59,14 +59,14 @@
             <asp:Label ID="Training5" runat="server" Text="" Visible="False"><li><a href="TrainingApp.aspx">Training App</a></li></asp:Label>
             <!--<li style="float:right"><a class="active" href="LogInPage.aspx">Sign In</a></li>-->
 
-        <li style="float:right"><asp:Button ID="btnsignin" CssClass="active" runat="server" Text="Sign In" OnClick="btnsignin_Click" /> </li>    
-                <li style="float:right"><asp:Button ID="btnsignout" runat="server" Text="Sign Out" Visible="False" OnClick="btnsignout_Click" /> </li>
+        <li style="float:right"><asp:Button ID="btnsignin" CssClass="active" runat="server" Text="Sign In" OnClick="btnsignin_Click" Height="54px"/> </li>    
+                <li style="float:right"><asp:Button ID="btnsignout" runat="server" Text="Sign Out" Visible="False" OnClick="btnsignout_Click" Height="54px"/> </li>
                 <li style="float:right"><asp:Label ID="lblwelcome" runat="server" Text="Welcome " Visible="False" ForeColor="#33AEE3"></asp:Label></li>   
         </ul>
     </div>
 
 
-    <form id="form1" runat="server">
+    
         <div>
 
             <br />

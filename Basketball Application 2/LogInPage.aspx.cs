@@ -19,6 +19,7 @@ namespace Basketball_Application_2
 
                 Edit2.Visible = true;
                 Training1.Visible = true;
+                Rego.Visible = false;
             }
         }
 
