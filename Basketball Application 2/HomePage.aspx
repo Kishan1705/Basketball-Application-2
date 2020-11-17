@@ -10,7 +10,10 @@
 
 
     <style>
-        h1 {text-align: center;}
+        h1 {
+            text-align: center;
+        }
+
         ul {
             list-style-type: none;
             margin: -10px;
@@ -49,75 +52,102 @@
 
         /*Slideshow*/
 
-        * {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
-img {vertical-align: middle;}
+        * {
+            box-sizing: border-box;
+        }
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
+        body {
+            font-family: Verdana, sans-serif;
+        }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
+        .mySlides {
+            display: none;
+        }
 
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
+        img {
+            vertical-align: middle;
+        }
 
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
 
-.active2 {
-  background-color: #717171;
-}
+         h1{
+            text-decoration: underline overline;
+        }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
 
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
 
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
+        /* The dots/bullets/indicators */
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
-}
+        .active2 {
+            background-color: #717171;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        /* On smaller screens, decrease text size */
+        @media only screen and (max-width: 300px) {
+            .text {
+                font-size: 11px
+            }
+        }
     </style>
     <title></title>
 </head>
@@ -132,118 +162,125 @@ img {vertical-align: middle;}
                 <asp:Label ID="Edit2" runat="server" Text="" Visible="False"><li><a href="UserModify.aspx">Edit</a></li></asp:Label>
                 <asp:Label ID="Training1" runat="server" Text="" Visible="False"><li><a href="TrainingApp.aspx">Training App</a></li></asp:Label>
                 <asp:Label ID="Admin1" runat="server" Text="" Visible="False"><li><a href="Modify.aspx">Admin Modify</a></li></asp:Label>
-                <li style="float:right"><asp:Button ID="btnsignin" CssClass="active" runat="server" Text="Sign In" OnClick="btnsignin_Click" Height="54px" /> </li>    
-                <li style="float:right"><asp:Button ID="btnsignout" CssClass="active" runat="server" Text="Sign Out" Visible="False" OnClick="btnsignout_Click" Height="54px"/> </li>
-                <li style="float:right"><asp:Label ID="lblwelcome" runat="server" Text="Welcome " Visible="False" Font-Size="XX-Large" ForeColor="#33AEE3" ></asp:Label></li>    
-            </ul>
+                <li style="float: right"> 
+                    <asp:Button ID="btnsignin" CssClass="active" runat="server" Text="Sign In" OnClick="btnsignin_Click" Height="54px" />
+                </li>
+                <li style="float: right">
+                    <asp:Button ID="btnsignout" CssClass="active" runat="server" Text="Sign Out" Visible="False" OnClick="btnsignout_Click" Height="54px" />
+                </li>
+                <li style="float: right">
+                    <asp:Label ID="lblwelcome" runat="server" Text="Welcome " Visible="False" Font-Size="XX-Large" ForeColor="#33AEE3"></asp:Label></li>
+            </ul> <!--This code in this div here is for my navagation bar to navigate you al=round the website, ive also got styling on some of the elements here to add some colour to the nav bar. I also have
+                got session variables -->
         </div>
         <h1>Welcome To The Breaker Nation</h1>
 
 
-<div class="slideshow-container">
+        <div class="slideshow-container">
 
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="Images/0L2A9726.jpg" style="width:100%">
-  <div class="text">1</div>
-</div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="Images/0L2A9726.jpg" style="width: 100%">
+                <div class="text">1</div>
+            </div>
 
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="Images/Spark Arena (2).jpg" style="width:100%">
-  <div class="text">2</div>
-</div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="Images/Spark Arena (2).jpg" style="width: 100%">
+                <div class="text">2</div>
+            </div>
 
-<div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="Images/Corey - Dribble.jpg" style="width:100%">
-  <div class="text">3</div>
-</div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="Images/Corey - Dribble.jpg" style="width: 100%">
+                <div class="text">3</div>
+            </div>
 
-    <div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="Images/Diamond Seats 5.jpg" style="width:100%">
-  <div class="text">4</div>
-</div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="Images/Diamond Seats 5.jpg" style="width: 100%">
+                <div class="text">4</div>
+            </div>
 
-    <div class="mySlides fade">
-  <div class="numbertext"></div>
-  <img src="Images/Diamond Seats 7.jpg" style="width:100%">
-  <div class="text">5</div>
-</div>
+            <div class="mySlides fade">
+                <div class="numbertext"></div>
+                <img src="Images/Diamond Seats 7.jpg" style="width: 100%">
+                <div class="text">5</div>
+            </div>
 
-</div>
-<br>
+        </div>
+        <br>
 
 
-<div style="text-align:center" hidden="hidden">
-  <span class="dot"></span> 
-  <span class="dot"></span> 
-    <span class="dot"></span> 
-    <span class="dot"></span> 
-  <span class="dot"></span> <asp:RadioButton ID="RadioButton1" runat="server" />
-</div>
+        <div style="text-align: center" hidden="hidden">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <asp:RadioButton ID="RadioButton1" runat="server" />
+        </div>
 
-<script>
-var slideIndex = 0;
-showSlides();
+        <script>
+            var slideIndex = 0;
+            showSlides();
 
-function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active2", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active2";
-  setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-</script>
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("dot");
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) { slideIndex = 1 }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active2", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active2";
+                setTimeout(showSlides, 2000); // Change image every 2 seconds
+            }
+        </script>
 
         <h1>Game Highlights</h1>
 
- <div style="margin-bottom: 10px;" class="w3-quarter">
-        <div class="w3-card w3-white">
-            <div class="w3-container container">
-           
-                <iframe width="425" height="270" src="https://www.youtube.com/embed/gLACCRu6uxU" frameborder="0" allowfullscreen="true"></iframe>
-               
-            </div>
-        </div>
-    </div>
-    <div style="margin-bottom: 10px;" class="w3-quarter">
-        <div class="w3-card w3-white">
-            <div class="w3-container container">
-           
-                <iframe width="425" height="270" src="https://www.youtube.com/embed/nTU_8yx3hBs" frameborder="0" allowfullscreen="true"></iframe>
-                
-            </div>
-        </div>
-    </div>
-    <div style="margin-bottom: 10px;" class="w3-quarter">
-        <div class="w3-card w3-white">
-            <div class="w3-container container">
-    
-                <iframe width="425" height="270" src="https://www.youtube.com/embed/XRj8sNmFINM" frameborder="0" allowfullscreen="true"></iframe>
-                
-            </div>
-        </div>
-    </div>
         <div style="margin-bottom: 10px;" class="w3-quarter">
-        <div class="w3-card w3-white">
-            <div class="w3-container container">
-    
-                <iframe width="425" height="270" src="https://www.youtube.com/embed/88RfdDjbmVk" frameborder="0" allowfullscreen="true"></iframe>
-                
+            <div class="w3-card w3-white">
+                <div class="w3-container container">
+
+                    <iframe width="425" height="270" src="https://www.youtube.com/embed/gLACCRu6uxU" frameborder="0" allowfullscreen="true"></iframe>
+
+                </div>
             </div>
         </div>
-    </div>
+        <div style="margin-bottom: 10px;" class="w3-quarter">
+            <div class="w3-card w3-white">
+                <div class="w3-container container">
+
+                    <iframe width="425" height="270" src="https://www.youtube.com/embed/nTU_8yx3hBs" frameborder="0" allowfullscreen="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+        <div style="margin-bottom: 10px;" class="w3-quarter">
+            <div class="w3-card w3-white">
+                <div class="w3-container container">
+
+                    <iframe width="425" height="270" src="https://www.youtube.com/embed/XRj8sNmFINM" frameborder="0" allowfullscreen="true"></iframe>
+
+                </div>
+            </div>
+        </div>
+        <div style="margin-bottom: 10px;" class="w3-quarter">
+            <div class="w3-card w3-white">
+                <div class="w3-container container">
+
+                    <iframe width="425" height="270" src="https://www.youtube.com/embed/88RfdDjbmVk" frameborder="0" allowfullscreen="true"></iframe>
+
+                </div>
+            </div>
+        </div>
 
 
 

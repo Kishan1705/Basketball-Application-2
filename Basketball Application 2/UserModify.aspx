@@ -36,7 +36,18 @@
             background-color: #33AEE3;
         }
 
+         body {
+            background-image: url(Images/adminmodify.jpg);
+        }
 
+          .Styling {
+            height: 400px;
+            width: 500px;
+            background-color: white;
+            margin: 0;
+            position: absolute;
+            opacity: 0.6;
+        }
 
         .Logo {
             padding-top: 10px;
@@ -48,22 +59,25 @@
 <body>
 
     <div class="Logo">
-    <ul>
+        <ul>
             <li><a href="HomePage.aspx">
                 <img src="Images/Sky-Sport-Breakers-Logo-White.png" style="width: 61.24px; height: 22.7px;" /></a></li>
             <li><a href="Players.aspx">Players</a></li>
-             <asp:Label ID="Rego" runat="server" Text="" Visible="true"><li><a href="WebForm1.aspx">Register</a></li></asp:Label>
+            <asp:Label ID="Rego" runat="server" Text="" Visible="true"><li><a href="WebForm1.aspx">Register</a></li></asp:Label>
             <asp:Label ID="Edit3" runat="server" Text="" Visible="False"><li><a href="UserModify.aspx">Edit</a></li></asp:Label>
-        <asp:Label ID="Training4" runat="server" Text="" Visible="False"><li><a href="TrainingApp.aspx">Training App</a></li></asp:Label>
+            <asp:Label ID="Training4" runat="server" Text="" Visible="False"><li><a href="TrainingApp.aspx">Training App</a></li></asp:Label>
             <!--<li style="float:right"><a class="active" href="LogInPage.aspx">Sign In</a></li>-->
-        <li style="float:right"><asp:Button ID="btnsignout" runat="server" Text="Sign Out" Visible="False" OnClick="btnsignout_Click" Height="54px"/> </li>
-                <li style="float:right"><asp:Label ID="lblwelcome" runat="server" Text="Welcome " Visible="False" ForeColor="#33AEE3"></asp:Label></li> 
-       
-    </ul>
+            <li style="float: right">
+                <asp:Button ID="btnsignout" runat="server" Text="Sign Out" Visible="False" OnClick="btnsignout_Click" Height="54px" />
+            </li>
+            <li style="float: right">
+                <asp:Label ID="lblwelcome" runat="server" Text="Welcome " Visible="False" ForeColor="#33AEE3"></asp:Label></li>
+
+        </ul>
     </div>
     <br />
     <form id="form1" runat="server">
-        <div>
+        <div class="w3-container Styling">
             <asp:Label ID="Label1" runat="server" Text="Username:"></asp:Label>&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="txtusername" runat="server" OnTextChanged="txtusername_TextChanged" AutoPostBack="true"></asp:TextBox>
             <br />

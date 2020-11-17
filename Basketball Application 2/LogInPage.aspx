@@ -39,66 +39,91 @@
             background-color: #33AEE3;
         }
 
+         body {
+            background-image: url(Images/log.jpg);
+        }
 
+          .Styling {
+            height: 400px;
+            width: 573px;
+            background-color: white;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            opacity: 0.6;
+        }
 
         .Logo {
             padding-top: 10px;
             padding-bottom: 20px;
         }
+
+          h1{
+            text-decoration: underline overline;
+        }
     </style>
     <title></title>
 </head>
 <body>
-       <form id="form1" runat="server">
+    <form id="form1" runat="server">
 
         <div class="Logo">
             <ul>
                 <li><a href="HomePage.aspx">
                     <img src="Images/Sky-Sport-Breakers-Logo-White.png" style="width: 61.24px; height: 22.7px;" /></a></li>
                 <li><a href="Players.aspx">Players</a></li>
-                 <asp:Label ID="Rego" runat="server" Text="" Visible="true"><li><a href="WebForm1.aspx">Register</a></li></asp:Label>
+                <asp:Label ID="Rego" runat="server" Text="" Visible="true"><li><a href="WebForm1.aspx">Register</a></li></asp:Label>
                 <asp:Label ID="Edit2" runat="server" Text="" Visible="False"><li><a href="UserModify.aspx">Edit</a></li></asp:Label>
                 <asp:Label ID="Training1" runat="server" Text="" Visible="False"><li><a href="TrainingApp.aspx">Training App</a></li></asp:Label>
                 <asp:Label ID="Admin1" runat="server" Text="" Visible="False"><li><a href="Modify.aspx">Admin Modify</a></li></asp:Label>
-                <li style="float:right"><asp:Button ID="btnsignin" CssClass="active" runat="server" Text="Sign In" OnClick="btnsignin_Click" Height="54px"/> </li>    
-                <li style="float:right"><asp:Button ID="btnsignout" runat="server" Text="Sign Out" Visible="False" OnClick="btnsignout_Click" Height="54px"/> </li>
-                <li style="float:right"><asp:Label ID="lblwelcome" runat="server" Text="Welcome " Visible="False" ForeColor="#33AEE3"></asp:Label></li>    
+                <li style="float: right">
+                    <asp:Button ID="btnsignin" CssClass="active" runat="server" Text="Sign In" OnClick="btnsignin_Click" Height="54px" />
+                </li>
+                <li style="float: right">
+                    <asp:Button ID="btnsignout" runat="server" Text="Sign Out" Visible="False" OnClick="btnsignout_Click" Height="54px" />
+                </li>
+                <li style="float: right">
+                    <asp:Label ID="lblwelcome" runat="server" Text="Welcome " Visible="False" ForeColor="#33AEE3"></asp:Label></li>
             </ul>
         </div>
 
 
-        
-
-  
 
 
- 
-        <div>
-            <br />
-            <asp:Label ID="Label1" runat="server" Text="Sign In "></asp:Label>
+
+
+
+
+        <div class="w3-container Styling">
+            <h1>Sign In</h1>
+            
+           
             <br />
             <br />
             <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/WebForm1.aspx">Dont have an account, Sign up now</asp:HyperLink>
             <br />
             <br />
             <asp:Label ID="Label2" runat="server" Text="Username:"></asp:Label>
-&nbsp;&nbsp;&nbsp;
-            <asp:TextBox ID="User1" runat="server" onkeydown = "return (event.keyCode!=13)"></asp:TextBox>
+            &nbsp;&nbsp;&nbsp;
+            <asp:TextBox ID="User1" runat="server" onkeydown="return (event.keyCode!=13)"></asp:TextBox>
             <br />
             <br />
             <asp:Label ID="Label5" runat="server" Text="Email:"></asp:Label>
-&nbsp;&nbsp;
-            <asp:TextBox ID="Email1" runat="server" onkeydown = "return (event.keyCode!=13)"></asp:TextBox>
+            &nbsp;&nbsp;
+            <asp:TextBox ID="Email1" runat="server" onkeydown="return (event.keyCode!=13)" TextMode="Email"></asp:TextBox>
             <br />
             <br />
-            <asp:Label ID="Label3" runat="server" onkeydown = "return (event.keyCode!=13)" Text="Password:"></asp:Label>
-&nbsp;&nbsp;
+            <asp:Label ID="Label3" runat="server" onkeydown="return (event.keyCode!=13)" Text="Password:"></asp:Label>
+            &nbsp;&nbsp;
 
-            <asp:TextBox ID="Password1" runat="server" onkeydown = "return (event.keyCode!=13)"></asp:TextBox>
+            <asp:TextBox ID="Password1" runat="server" onkeydown="return (event.keyCode!=13)" TextMode="Password"></asp:TextBox>
             <br />
             <br />
             <asp:Button ID="Button1" runat="server" Text="Sign In" OnClick="Button1_Click" />
-&nbsp;&nbsp;
+            &nbsp;&nbsp;
             <br />
             <br />
             <asp:Label ID="Label4" runat="server" Text=""></asp:Label>

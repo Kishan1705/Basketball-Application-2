@@ -44,7 +44,7 @@ namespace Basketball_Application_2
 
         protected void btnsave_Click(object sender, EventArgs e)
         {
-            if (txtusername.Text == "" || txtemail.Text == "" || txtpassword.Text == "" || txtusername.Text.Length < 5 || txtemail.Text.Length < 5 || txtpassword.Text.Length < 5)
+            if (txtusername.Text == "" || txtemail.Text == "" || txtpassword.Text == "" || txtusername.Text.Length < 5 || txtemail.Text.Length < 5 || txtpassword.Text.Length < 6)
             {
                 lblerrormessage.Text = "Not Enough Credentials";
             }

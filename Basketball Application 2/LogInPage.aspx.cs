@@ -32,6 +32,7 @@ namespace Basketball_Application_2
         {
             Session["checksignin"] = "false";
             Response.Redirect("~/LogInPage.aspx");
+            
         }
 
         protected void Button1_Click(object sender, EventArgs e)//login

@@ -25,12 +25,24 @@ namespace Basketball_Application_2
             {
                 Admin1.Visible = true;
             }
+
+            if ((string)Session["videos"] == "watched")
+            {
+                
+            }
         }
 
         protected void btnsignout_Click(object sender, EventArgs e)
         {
             Session["checksignin"] = "false";
             Response.Redirect("~/LogInPage.aspx");
+        }
+
+        protected void Video1_click(object sender, EventArgs e)
+        {
+            Session["videos"] = "watched";
+
+            //ProgressBar.Width = 1690;
         }
     }
 }

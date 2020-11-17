@@ -133,6 +133,7 @@
     <Content Include="Images\0L2A9726.jpg" />
     <Content Include="Images\190731BreakersBB_05.JPG" />
     <Content Include="Images\190731BreakersBB_07.jpg" />
+    <Content Include="Images\adminmodify.jpg" />
     <Content Include="Images\Corey - Dribble.jpg" />
     <Content Include="Images\CoreyWebster.png" />
     <Content Include="Images\Diamond Seats 5.jpg" />
@@ -141,9 +142,16 @@
     <Content Include="Images\Finn Delany.jpg" />
     <Content Include="Images\FinnDelany.png" />
     <Content Include="Images\JordanNgatai.png" />
+    <Content Include="Images\log.jpg" />
+    <Content Include="Images\Login.jpg" />
+    <Content Include="Images\LogInPage.jpg" />
+    <Content Include="Images\Loginpageofficial.jpg" />
     <Content Include="Images\Majok.png" />
     <Content Include="Images\Majok2.png" />
     <Content Include="Images\RobLoe.png" />
+    <Content Include="Images\signup.jpg" />
+    <Content Include="Images\signup1.jpg" />
+    <Content Include="Images\signup2.jpg" />
     <Content Include="Images\Sky-Sport-Breakers-Logo-White.png" />
     <Content Include="Images\BREAKERS_01_TomAbercrombie_1267.png" />
     <Content Include="Images\BREAKERS_02_CoreyWebster_2813.png" />
